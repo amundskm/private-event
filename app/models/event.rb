@@ -1,6 +1,5 @@
 class Event < ActiveRecord::Base
-  has_many :event_guests, :foreign_key => :guest_event_id
-  has_many :guests, :through => :event_guests,
-                                :source => :event_guest
-  belongs_to :host, :class_name => "User"
+has_many :events_guests, :foreign_key => :attendable_event_id
+has_many :guests, :through => :event_guests
+belongs_to :host
 end
