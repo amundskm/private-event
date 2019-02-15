@@ -3,8 +3,12 @@
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "Log in", login_path %></li>
-        <li><%= link_to current_user.name, current_user %></li>
+        <% if current_user.nil? %>
+          <li><%= link_to "Log in", login_path %></li>
+        <% else %>
+          <li><%= link_to current_user.name, current_user %></li>
+          <li><%= link_to "Logout", logout_path %></li>
+        <% end %>
       </ul>
     </nav>
   </div>
