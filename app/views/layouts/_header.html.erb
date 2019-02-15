@@ -4,6 +4,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Home", root_path %></li>
         <li><%= link_to "Log in", login_path %></li>
+        <li><%= link_to current_user.name, current_user %></li>
       </ul>
     </nav>
   </div>

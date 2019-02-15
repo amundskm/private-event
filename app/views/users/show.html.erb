@@ -1,0 +1,22 @@
+<%= render "layouts/header" %>
+<div class="row">
+  <aside class="col-md-4">
+    <h1>
+      <%= @user.name %>
+    </h1>
+  </aside>
+
+  <div class="col-md-6 col-md-offset-3">
+    <h1> Upcoming Events </h1>
+    <ul class="upcoming_events">
+      <li>@upcoming_events</li>
+    </ul>
+  </div>
+
+  <div class="col-md-6 col-md-offset-3">
+    <h1> Past Events </h1>
+    <ul class="past_events">
+      <li>@past_events</li>
+    </ul>
+  </div>
+</div>

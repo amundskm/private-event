@@ -1,5 +1,4 @@
 class SessionsController < ApplicationController
-  include SessionsHelper
 
   def create
     user = User.find_by(name: params[:sessions][:name].downcase)
