@@ -1,0 +1,5 @@
+<%= form_for(:event, url: new_events_path) do |f| %>
+  <%= f.label :date %>
+  <%= f.date_field :date, class: 'form_control'%>
+  <%= f.submit "Submit event", class: "btn btn-primary" %>
+<% end %>
