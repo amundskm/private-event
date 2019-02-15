@@ -1,0 +1,5 @@
+<%= form_for(yield(:record), url: yield(:url_path)) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, class: 'form_control'%>
+  <%= f.submit "Submit Name", class: "btn btn-primary" %>
+<% end %>

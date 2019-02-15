@@ -1,8 +1,11 @@
 class SessionsController < ApplicationController
+  include SessionsHelper
+
   def create
-    user = User.find_by(name: params[:session][:name].downcase)
+    user = User.find_by(name: params[:sessions][:name].downcase)
     if user
       log_in user
+      redirect_to user
     else
       flash[:warning] = "No user by that name."
       render 'new'
