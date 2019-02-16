@@ -7,7 +7,7 @@ class EventsController < ApplicationController
   def create
     unless current_user.nil?
 
-      @event = current_user.hosted_events.new(:date => params[:date])
+      @event = current_user.hosted_events.build(params)
       if @event.save
         flash[:info] = "Event saved."
         redirect_to current_user
