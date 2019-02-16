@@ -10,8 +10,4 @@ class User < ActiveRecord::Base
   def downcase_name
     self.name.downcase!
   end
-
-  def upcoming_events
-    Event.find_by(id: self.id)
-  end
  end

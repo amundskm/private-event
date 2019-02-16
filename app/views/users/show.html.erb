@@ -7,9 +7,29 @@
   </aside>
 
   <div class="col-md-6 col-md-offset-3">
-    <h1> Events </h1>
+    <h1> Hosted Events </h1>
       <ul class="events">
-        <li><%= @host_events %></li>
+        <% @hosted_events.each do |event| %>
+          <li><%= link_to event.date, event%></li>
+        <% end %>
+      </ul>
+  </div>
+
+  <div class="col-md-6 col-md-offset-3">
+    <h1> Upcoming Events </h1>
+      <ul class="events">
+        <% @upcoming_events.each do |event| %>
+          <li><%= link_to event.date, event%></li>
+        <% end %>
+      </ul>
+  </div>
+
+  <div class="col-md-6 col-md-offset-3">
+    <h1> Past Events </h1>
+      <ul class="events">
+        <% @past_events.each do |event| %>
+          <li><%= link_to event.date, event%></li>
+        <% end %>
       </ul>
   </div>
 

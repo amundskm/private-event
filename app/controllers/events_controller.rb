@@ -4,6 +4,10 @@ class EventsController < ApplicationController
     @event = Event.new
   end
 
+  def show
+    @event = Event.find(params[:id])
+  end
+
   def create
     unless current_user.nil?
 
@@ -18,7 +22,8 @@ class EventsController < ApplicationController
   end
 
   def index
-    @events = Event.where(creator_id: current_user.id)
+    @all_upcoming_events = Event.upcoming_events
+    @all_past_events = Event.past_events
   end
 
 end

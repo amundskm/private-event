@@ -1,3 +1,4 @@
+<%= render "layouts/header" %>
 <%= form_for(:event, url: new_events_path) do |f| %>
   <%= f.label :description %>
   <%= f.text_field :description, class: 'form_control'%>
